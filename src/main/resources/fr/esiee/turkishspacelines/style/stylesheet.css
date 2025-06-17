@@ -1,0 +1,67 @@
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #2262C6, #1B4C90);
+    -fx-background-radius: 0px 50px 0px 0px;
+}
+
+.grayBackground {
+    -fx-background-color: #DFE1E5;
+}
+
+.labbtn {
+    -fx-text-fill: #FEFFFD;
+    -fx-background-color: #C70B0B;
+    -fx-background-radius: 50px;
+    -fx-padding: 10px 20px;
+    -fx-font-weight: bold;
+    -fx-border-color: #DFE1E5;
+    -fx-border-radius: 50px;
+    -fx-border-width: 2px;
+}
+
+.labbtn:hover {
+    -fx-background-color: #FEFFFD;
+    -fx-text-fill: #C70B0B;
+    -fx-cursor: hand;
+}
+
+.sidebar-btn {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+.sidebar-btn-text {
+    -fx-text-fill: #A2BEE8;
+    -fx-font-size: 14px;
+}
+
+.sidebar-btn:hover .sidebar-btn-text {
+    -fx-text-fill: #FFFFFF;
+    -fx-cursor: hand;
+}
+
+.scene {
+    -fx-background-color: #F4F4F4;
+}
+
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2262C6;
+}
+
+.subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333;
+}
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px;
+    -fx-border-color: #2C2E33;
+    -fx-border-radius: 20px;
+}

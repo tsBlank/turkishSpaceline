@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="fr.esiee.turkishspacelines.controller.Authentification" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="135.0" layoutY="67.0" prefHeight="316.0" prefWidth="314.0" styleClass="grayBackground">
+         <children>
+            <Label layoutX="81.0" layoutY="24.0" text="Page de connexion">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button onAction="#ButtonLogin" fx:id="ButtonLogin" alignment="TOP_CENTER" layoutX="88.0" layoutY="261.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="146.0" styleClass="labbtn" text="Se connecter" />
+         </children>
+      </Pane>
+      
+      
+      <TextField fx:id="loginField" layoutX="213.0" layoutY="164.0" promptText="Votre identifiant"/>
+      
+      <Label layoutX="229.0" layoutY="228.0" text="Mot de passe" />
+      <Label layoutX="230.0" layoutY="146.0" text="Identifiant" />
+      
+    
+      <PasswordField fx:id="passwordField" layoutX="212.0" layoutY="248.0" promptText="Votre mot de passe"/>
+      
+      <ImageView fitHeight="36.0" fitWidth="188.0" layoutX="209.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/spacelines.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="70.0" layoutY="88.0" prefHeight="200.0" prefWidth="100.0" />
+   </children>
+</Pane>

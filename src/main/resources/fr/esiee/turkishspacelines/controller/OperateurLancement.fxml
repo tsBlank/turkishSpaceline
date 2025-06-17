@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+
+
+
+<Pane fx:controller="fr.esiee.turkishspacelines.controller.OperateurLancementController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1280.0" stylesheets="@../style/stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+      <Label fx:id="operatorNameLabel" layoutX="220.0" layoutY="29.0" text="Opérateur de lancement : [NOM]">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+
+      <ImageView fitHeight="36.0" fitWidth="188.0" layoutX="16.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/spacelines.png" />
+         </image>
+      </ImageView>
+      <Line endX="1115.0" endY="-35.58424377441406" layoutX="165.0" layoutY="123.0" startX="-197.7883758544922" startY="-35.584259033203125" stroke="#a1a1a1" />
+      <Line endX="-197.78839111328125" endY="238.7586669921875" layoutX="393.0" layoutY="-152.0" startX="-197.7884063720703" startY="146.0294647216797" stroke="#a1a1a1" />
+      <Separator layoutX="44.0" layoutY="387.0" prefHeight="1.0" prefWidth="1199.0" />
+      <Pane layoutX="89.0" layoutY="125.0">
+         <children>
+            <ScrollPane layoutY="33.0" prefHeight="200.0" prefWidth="1117.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="1099.0">
+                     <children>
+                        <TableView layoutX="-4.0" layoutY="-1.0" prefHeight="200.0" prefWidth="1115.0">
+                          <columns>
+                            <TableColumn prefWidth="90.1724853515625" text="N° Vol" />
+                            <TableColumn prefWidth="126.78047180175781" text="Planète départ" />
+                              <TableColumn prefWidth="112.42742919921875" text="Planète arrivée" />
+                              <TableColumn prefWidth="102.73544311523438" text="Date A/R" />
+                              <TableColumn prefWidth="150.0570068359375" text="Nombre voyageurs" />
+                              <TableColumn prefWidth="194.876708984375" text="Gérer le vol" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Label layoutX="1.0" text="Prochains vols :" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="1069.0" layoutY="6.0" text="0 vol(s)">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="88.0" layoutY="422.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutY="32.0" prefHeight="141.0" prefWidth="204.0" spacing="5.0" style="-fx-border-color: #a1a1a1;" styleClass="grayBackground">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Fusées totales prêtes au décollage :" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Separator>
+                  <Label text="0 / 10" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+               <padding>
+                  <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="255.0" layoutY="33.0" prefHeight="141.0" prefWidth="204.0" spacing="5.0" style="-fx-border-color: #a1a1a1;" styleClass="grayBackground">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Fusées totales en maintenance :" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Separator>
+                  <Label text="0 / 10" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+               <padding>
+                  <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
+               </padding>
+            </VBox>
+            <Label layoutX="2.0" layoutY="-2.0" text="Informations générales :" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="logoutButton" onAction="#handleLogoutButton" layoutX="1130.0" layoutY="32.0" prefHeight="26.0" prefWidth="120.0" text="Déconnexion"/>
+   </children>
+</Pane>
