@@ -5,17 +5,11 @@ public class User {
     private int userId;
     private String fullName;
     private String login;
-    private String password; // Pour cet exemple, on le garde. Normalement, on ne manipule pas le mdp en
-                             // clair.
+    private String password;
     private String role;
 
-    // Constructeur vide (souvent utile)
     public User() {
     }
-
-    // Getters et Setters pour chaque champ
-    // Pour les générer rapidement dans VS Code : Clic droit > Source Action... >
-    // Generate Getters and Setters...
 
     public int getUserId() {
         return userId;
