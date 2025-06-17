@@ -1,7 +1,6 @@
 # Projet TurkishSpacelines avec JavaFX
 
-[Fatih CAKICI](/B1_Systeme/img/mailto:fatih.cakici@edu.esiee-it.fr), ESIEE-IT
-Projet MyEasyline (BTS - SIO) - 19/12/2023
+[Théo Suquet], ESIEE-IT
 
 ![Logo de Turkish Spacelines](./images/logonoir.png)
 
