@@ -33,3 +33,7 @@ Ensemble, ces rôles forment une synergie essentielle pour le succès des missio
 
 - **Communication:** Discord _(Version: 267220 (23.0.0))_ - Utilisé pour la communication d'équipe et la coordination du projet.
 - **Gestion planning:** GanttProject _(Version: 3.2.3247)_ - Outil de planification pour le suivi des étapes et des délais du projet.
+
+### Commande pour lancer le projet :
+
+mvn javafx:run
