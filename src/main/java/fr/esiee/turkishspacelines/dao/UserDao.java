@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface UserDao {
 
-    Optional<User> findByLoginAndPassword(String login, String password);
+    Optional<User> findByEmailAndPassword(String email, String password);
 
 }
+

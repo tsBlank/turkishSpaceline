@@ -5,6 +5,7 @@ public class User {
     private int userId;
     private String fullName;
     private String login;
+    private String email;
     private String password;
     private String role;
 
@@ -21,6 +22,13 @@ public class User {
 
     public String getFullName() {
         return fullName;
+    }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setFullName(String fullName) {

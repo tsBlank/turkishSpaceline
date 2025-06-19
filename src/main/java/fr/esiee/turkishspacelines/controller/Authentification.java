@@ -20,22 +20,22 @@ import java.util.Optional;
 public class Authentification {
 
     @FXML
-    private TextField loginField;
+    private TextField emailField;
     @FXML
     private PasswordField passwordField;
 
     private UserDao userDao = new UserDaoImpl();
 
     public void ButtonLogin(ActionEvent event) {
-        String login = loginField.getText();
+        String email = emailField.getText();
         String password = passwordField.getText();
 
-        if (login.isEmpty() || password.isEmpty()) {
+        if (email.isEmpty() || password.isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Erreur", "Veuillez saisir un identifiant et un mot de passe.");
             return;
         }
 
-        Optional<User> userOptional = userDao.findByLoginAndPassword(login, password);
+        Optional<User> userOptional = userDao.findByEmailAndPassword(email, password);
 
         if (userOptional.isPresent()) {
             User loggedInUser = userOptional.get();

@@ -12,13 +12,13 @@ import java.util.Optional;
 public class UserDaoImpl implements UserDao {
 
     @Override
-    public Optional<User> findByLoginAndPassword(String login, String password) {
-        String sql = "SELECT * FROM users WHERE login = ? AND password = ?";
+    public Optional<User> findByEmailAndPassword(String email, String password) {
+        String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
 
         try (Connection conn = DatabaseManager.getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setString(1, login);
+            pstmt.setString(1, email);
             pstmt.setString(2, password);
 
             ResultSet rs = pstmt.executeQuery();
@@ -30,6 +30,7 @@ public class UserDaoImpl implements UserDao {
                 user.setFullName(rs.getString("full_name"));
                 user.setLogin(rs.getString("login"));
                 user.setRole(rs.getString("role"));
+                pstmt.setString(2, user.getEmail());
 
                 return Optional.of(user);
             }
