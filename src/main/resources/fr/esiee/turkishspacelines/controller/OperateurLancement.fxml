@@ -129,4 +129,7 @@
       </Pane>
       <Button fx:id="logoutButton" onAction="#handleLogoutButton" layoutX="1130.0" layoutY="32.0" prefHeight="26.0" prefWidth="120.0" text="Déconnexion"/>
    </children>
+   <Button layoutX="88.0" layoutY="350.0" onAction="#handleExportPdfButton" text="Exporter la liste en PDF" />
+   <Button layoutX="88.0" layoutY="370.0" onAction="#handleShowStatistics" text="Afficher les statistiques" prefHeight="40.0" prefWidth="200.0" style="-fx-font-size: 14px;" />
+   
 </Pane>
